@@ -10,13 +10,12 @@ import campHomework5.core.abstracts.CheckService;
 public class CheckManager implements CheckService {
 
 	public static final String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$"; 
-	public static final String regex1 = "^[A-Za-z0-9+_.-]\\@([\\w]+\\.)+[\\w]+[\\w]$";
 	
 	
 	
 	@Override
 	public boolean checkFirstName(String firstName) {
-		if (firstName.length()<2) {
+		if (firstName.length()<3) {
 			System.out.println("Your first name should contain at least 2 characters ");
 			return false;
 		}
@@ -25,7 +24,7 @@ public class CheckManager implements CheckService {
 
 	@Override
 	public boolean checkLastName(String lastName) {
-		if (lastName.length()<2) {
+		if (lastName.length()<3) {
 			System.out.println("Your last name should contain at least 2 characters ");
 			return false;
 		}

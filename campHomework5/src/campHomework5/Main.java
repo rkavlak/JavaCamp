@@ -3,6 +3,7 @@ package campHomework5;
 import campHomework5.business.abstracts.UserService;
 import campHomework5.business.concretes.LoginManager;
 import campHomework5.business.concretes.UserManager;
+import campHomework5.core.abstracts.CheckService;
 import campHomework5.core.adapters.GoogleManagerAdapter;
 import campHomework5.core.concretes.CheckManager;
 import campHomework5.core.concretes.EmailManager;
@@ -20,13 +21,15 @@ public class Main {
 		User user = new User(1, "Ramazan", "KAVLAK","ramazan@gmail.com","159753456");
 		userService.register(user);
 		userService.login("ramazan@gmail.com", "159753456");
+
 		
 		System.out.println("Google simulated");
 		userService.registerToGoogle();
 		
-		User user1 = new User(2, "Dilan", "ÇINAR", "dilan@gmail.com","159753456");
+		User user1 = new User(2, "Dilan", "ÇINAR", "dilan@gmom","16");
 		userService.register(user1);
 		userService.login("dilan@gmail.com", "159");
+
 		
 		
 		
